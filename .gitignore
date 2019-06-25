@@ -87,3 +87,4 @@ genomedashboard_v2/secrets.py
 
 ### Dev Cruft
 db.sqlite3
+devnotes.txt

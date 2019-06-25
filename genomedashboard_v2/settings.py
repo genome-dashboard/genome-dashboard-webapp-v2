@@ -41,14 +41,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Custom apps.
+    'polls.apps.PollsConfig',
+    # Django.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Example apps.
 ]
 
 MIDDLEWARE = [
@@ -181,5 +182,6 @@ GOOGLE_ANALYTICS_PRELOAD = secrets._GOOGLE_ANALYTICS_PRELOAD
 
 # Exported settings.
 SETTINGS_EXPORT = [
-    ''
+    'GOOGLE_ANALYTICS_PROPERTY_ID',
+    'GOOGLE_ANALYTICS_PRELOAD'
 ]
