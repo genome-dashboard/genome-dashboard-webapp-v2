@@ -4,7 +4,11 @@ from .models import Question
 
 # Define model admin class.
 class QuestionAdmin(admin.ModelAdmin):
-    fields = ['pub_date', 'question_text']
+    # fields = ['pub_date', 'question_text']
+    fieldsets = [
+        (None,               {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
 
 
 # Register your models here.
