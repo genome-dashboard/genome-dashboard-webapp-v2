@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- {% block title %}<title>Genome Dashboard</title>{% endblock title %} -->
+  <title>Genome Dashboard {% block subtitle %}{% endblock subtitle %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'genomedashboard_v2/styles.css' %}">
+
+  {% block styles %}<!-- default css code (typically empty) -->{% endblock styles %}
+</head>
+<body>
+  {% block navigation %}<!-- insert default navigation bar for every page -->{% endblock navigation %}
+  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock sidebar %}
+
+  {% block content %}<!-- default content text (typically empty) -->{% endblock content %}
+
+  <script>
+    console.log('Executing script block in templates/base.html...')
+  </script>
+  {% block scripts %}<!-- default scripting code (typically empty) -->{% endblock scripts %}
+
+</body>
+</html>

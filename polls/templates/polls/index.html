@@ -1,7 +1,16 @@
+{% extends "base.html" %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
+{% block subtitle %}- Polls/Index{% endblock subtitle %}
+
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+{% endblock styles %}
+
+
+{% block content %}
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -15,3 +24,10 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+{% endblock content %}
+
+
+{% block scripts %}
+<!-- default scripting code (typically empty) -->
+console.log('Executing script block in templates/polls/index.html...')
+{% endblock scripts %}
