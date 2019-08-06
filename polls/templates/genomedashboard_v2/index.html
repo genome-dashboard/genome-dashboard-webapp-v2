@@ -1,21 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Template Inheritance Block For Title -->
+{% block subtitle %}Home{% endblock subtitle %}
 
-{% block subtitle %}- Index{% endblock subtitle %}
-
-
+<!-- Template Inheritance Block For Styles -->
 {% block styles %}
 <!-- default css code (typically empty) -->
 {% endblock styles %}
 
+<!-- Template Inheritance Block For Navigation -->
+{% block navigation %}{% endblock navigation %}
 
+<!-- Template Inheritance Block For Sidebar -->
+{% block sidebar %}{% endblock sidebar %}
+
+<!-- Template Inheritance Block For Content -->
 {% block content %}
 <h1>INDEX</h1>
 {% endblock content %}
 
-
+<!-- Template Inheritance Block For Scripts -->
 {% block scripts %}
-<!-- default scripting code (typically empty) -->
-console.log('Executing script block in templates/genomedashboard_v2/index.html...')
+<script src="{% static 'genomedashboard_v2/scripts/index.js' %}" crossorigin="anonymous"></script>
 {% endblock scripts %}

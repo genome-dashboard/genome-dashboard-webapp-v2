@@ -1,3 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Template Inheritance Block For Title -->
+{% block subtitle %}Polls:Detail{% endblock subtitle %}
+
+<!-- Template Inheritance Block For Styles -->
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style/style.css' %}">
+{% endblock styles %}
+
+<!-- Template Inheritance Block For Navigation -->
+{% block navigation %}{% endblock navigation %}
+
+<!-- Template Inheritance Block For Sidebar -->
+{% block sidebar %}{% endblock sidebar %}
+
+<!-- Template Inheritance Block For Content -->
+{% block content %}
 <!-- Version 1. -->
 <!-- {{ question }} -->
 
@@ -16,10 +35,16 @@
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
-    {% csrf_token %}
-    {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-    <input type="submit" value="Vote">
+  {% csrf_token %}
+  {% for choice in question.choice_set.all %}
+  <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+  <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+  {% endfor %}
+  <input type="submit" value="Vote">
 </form>
+{% endblock content %}
+
+<!-- Template Inheritance Block For Scripts -->
+{% block scripts %}
+<script src="{% static 'polls/scripts/detail.js' %}" crossorigin="anonymous"></script>
+{% endblock scripts %}

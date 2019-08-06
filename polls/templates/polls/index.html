@@ -1,33 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Template Inheritance Block For Title -->
+{% block subtitle %}Polls{% endblock subtitle %}
 
-{% block subtitle %}- Polls/Index{% endblock subtitle %}
-
-
+<!-- Template Inheritance Block For Styles -->
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style/style.css' %}">
 {% endblock styles %}
 
+<!-- Template Inheritance Block For Navigation -->
+{% block navigation %}{% endblock navigation %}
 
+<!-- Template Inheritance Block For Sidebar -->
+{% block sidebar %}{% endblock sidebar %}
+
+<!-- Template Inheritance Block For Content -->
 {% block content %}
 {% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <!--{#
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
-        #}-->
-        <!-- You must inclide the app namespace in the url if the app name is set in polls/apps.py. -->
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
+<ul>
+  {% for question in latest_question_list %}
+  <!-- You must inclide the app namespace in the url if the app name is set in polls/apps.py. -->
+  <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+  {% endfor %}
+</ul>
 {% else %}
-    <p>No polls are available.</p>
+<p>No polls are available.</p>
 {% endif %}
 {% endblock content %}
 
-
+<!-- Template Inheritance Block For Scripts -->
 {% block scripts %}
-<!-- default scripting code (typically empty) -->
-console.log('Executing script block in templates/polls/index.html...')
+<script src="{% static 'polls/scripts/index.js' %}" crossorigin="anonymous"></script>
 {% endblock scripts %}

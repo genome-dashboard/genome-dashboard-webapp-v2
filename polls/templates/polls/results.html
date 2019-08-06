@@ -1,9 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Template Inheritance Block For Title -->
+{% block subtitle %}Polls:Detail{% endblock subtitle %}
+
+<!-- Template Inheritance Block For Styles -->
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style/style.css' %}">
+{% endblock styles %}
+
+<!-- Template Inheritance Block For Navigation -->
+{% block navigation %}{% endblock navigation %}
+
+<!-- Template Inheritance Block For Sidebar -->
+{% block sidebar %}{% endblock sidebar %}
+
+<!-- Template Inheritance Block For Content -->
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
+  {% for choice in question.choice_set.all %}
+  <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+  {% endfor %}
 </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+{% endblock content %}
+
+<!-- Template Inheritance Block For Scripts -->
+{% block scripts %}
+<script src="{% static 'polls/scripts/results.js' %}" crossorigin="anonymous"></script>
+{% endblock scripts %}
