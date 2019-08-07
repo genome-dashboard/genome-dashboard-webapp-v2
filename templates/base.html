@@ -20,6 +20,10 @@
 <body>
   {% include "navigation.html" %}
 
+  <div class="bg-image-container">
+    <img src="{% static 'base/images/microbiology.jpg' %}" />
+  </div>
+
   <div class="container-fluid content-container">
     <!-- Template Inheritance Block For Content -->
     {% block content %}{% endblock content %}
