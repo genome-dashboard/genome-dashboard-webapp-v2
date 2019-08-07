@@ -3,14 +3,14 @@ from django.views import generic
 
 
 # def index(request):
-#     template_name = 'genomedashboard_v2/index.html'
+#     template_name = 'genomedashboard/index.html'
 #     index_context_object = []
 #     context = {'index_context_object': index_context_object}
 #     return render(request, template_name, context)
 
 
 class IndexView(generic.ListView):
-    template_name = 'genomedashboard_v2/index.html'
+    template_name = 'genomedashboard/index.html'
 
     def get_queryset(self):
         """

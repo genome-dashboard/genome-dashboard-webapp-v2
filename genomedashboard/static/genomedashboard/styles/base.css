@@ -17,8 +17,9 @@ body {
 }
 
 body {
+  background: #111 url("../images/microbiology.jpg") repeat;
   /* background-color: #111; */
-  /* color: #fff; */
+  color: #fff;
 }
 
 .navbar-brand-icon {

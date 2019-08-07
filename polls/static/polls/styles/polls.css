@@ -1,8 +1,9 @@
 body {
-    background: white url("images/1.jpg") repeat;
-    color: #000;
+    /* background: white url("../images/1.jpg") repeat; */
+    /* background: #fff; */
+    /* color: #000; */
 }
 
 li a {
-    color: green;
+    /* color: green; */
 }

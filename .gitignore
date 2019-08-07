@@ -84,7 +84,7 @@ local_settings.py
 /static/
 
 
-genomedashboard_v2/secrets.py
+genomedashboard/secrets.py
 
 ### Dev Cruft
 db.sqlite3
