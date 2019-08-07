@@ -81,7 +81,7 @@ target/
 *.pyc
 __pycache__/
 local_settings.py
-/static/
+/static_srv/
 
 
 genomedashboard/secrets.py

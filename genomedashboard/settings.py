@@ -146,13 +146,14 @@ STATIC_URL = '/static/'
 
 # Development paths.
 # STATIC_ROOT = os.path.join(BASE_DIR, '../static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_srv')
 
 # Production paths.
 # STATIC_ROOT = "/var/www/example.com/static/"
 
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),
     # Add specific app static resources here.
     # Remember to run: python manage.py collectstatic.
     os.path.join(BASE_DIR, 'genomedashboard/static'),

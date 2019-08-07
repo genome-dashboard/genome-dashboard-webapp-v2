@@ -4,28 +4,20 @@
 <html lang="en">
 
 <head>
-  <!-- base.html metadata elements -->
   {% include "meta.html" %}
 
-  <!-- Template Inheritance Block For Subtitle -->
+  <!-- Template Inheritance Block For Page Subtitle -->
   <title>Genome Dashboard {% block subtitle %}{% endblock subtitle %}</title>
 
-  <!-- base.html fonts -->
   {% include "fonts.html" %}
-
-  <!-- Vendor Styles -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" type="text/css" href="{% static 'genomedashboard/styles/base.css' %}">
+  {% include "vendor_styles.html" %}
+  {% include "custom_styles.html" %}
 
   <!-- Template Inheritance Block For Styles -->
   {% block styles %}{% endblock styles %}
 </head>
 
 <body>
-  <!-- default navigation bar for every page -->
   {% include "navigation.html" %}
 
   <div class="container-fluid content-container">
@@ -33,14 +25,8 @@
     {% block content %}{% endblock content %}
   </div>
 
-  <!-- Vendor Scripts -->
-  <!-- Bootstrap 4 Deps: jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <!-- Custom Scripts -->
-  <script src="{% static 'genomedashboard/scripts/base.js' %}" crossorigin="anonymous"></script>
+  {% include "vendor_scripts.html" %}
+  {% include "custom_scripts.html" %}
 
   <!-- Template Inheritance Block For Scripts -->
   {% block scripts %}{% endblock scripts %}

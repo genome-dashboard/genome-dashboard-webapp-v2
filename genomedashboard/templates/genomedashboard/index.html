@@ -6,7 +6,7 @@
 
 <!-- Template Inheritance Block For Styles -->
 {% block styles %}
-<!-- default css code (typically empty) -->
+<link rel="stylesheet" type="text/css" href="{% static 'genomedashboard/styles/genomedashboard.css' %}">
 {% endblock styles %}
 
 <!-- Template Inheritance Block For Navigation -->
@@ -17,6 +17,10 @@
 
 <!-- Template Inheritance Block For Content -->
 {% block content %}
+<div class="bg-image-container">
+  <img src="{% static 'base/images/microbiology.jpg' %}" />
+</div>
+
 <h1>Genome Dashboard</h1>
 
 <p>Genomics is a sequence based informatics science and a structure based molecular science. Historically these two scientific approaches were distinct. There are few tools that unite them in a way that is readily accessible and yet scientifically robust. Here we introduce the concept of a genomics dashboard as a tool specifically designed to integrate informatics and physical modeling approaches for the study of chromatin.</p>
