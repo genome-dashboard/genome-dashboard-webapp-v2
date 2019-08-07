@@ -25,6 +25,8 @@ from . import views
 urlpatterns = [
     # path('', views.index, name='index'),
     path('', views.IndexView.as_view(), name='index'),
-    path('polls/', include('polls.urls')),
+    # path('polls/', include('polls.urls')),
+    path('dashboard/', include('dashboard.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # <-- ONLY USE THIS IN DEVELOPMENT.
+# ]         # <-- USE THIS IN PRODUCTION, STATIC ASSETS WILL BE SERVED FROM THE STATIC_ROOT.

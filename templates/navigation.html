@@ -1,19 +1,29 @@
 {% load static %}
 
 <!-- Navigation Bar For Site -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navigation">
   <a class="navbar-brand" href="/"><i class="fas fa-dna navbar-brand-icon"></i>G-Dash</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/polls">Polls</a>
-      <!-- <a class="nav-item nav-link" href="/">Dash1</a> -->
-      <!-- <a class="nav-item nav-link" href="/">Dash2</a> -->
-      <!-- <a class="nav-item nav-link" href="/">Dash3</a> -->
-      <!-- <a class="nav-item nav-link" href="/">Dash4</a> -->
+      <!-- <a class="nav-item nav-link active" href="/"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a> -->
+      <!-- <a class="nav-item nav-link" href="/polls">Polls</a> -->
+      <!-- <a class="nav-item nav-link" href="/dashboard/"><i class="fas fa-laptop-code"></i> Dashboards</a> -->
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-laptop-code"></i> Dashboards
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/dashboard/">Dashboard Index</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/dashboard/d1">Dashboard 1</a>
+          <a class="dropdown-item" href="/dashboard/d2">Dashboard 2</a>
+          <a class="dropdown-item" href="/dashboard/d3">Dashboard 3</a>
+          <a class="dropdown-item" href="/dashboard/d4">Dashboard 4</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Custom apps.
     'genomedashboard.apps.GenomedashboardConfig',
     'polls.apps.PollsConfig',
+    'dashboard.apps.DashboardConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Template Inheritance Block For Page Subtitle -->
+{% block subtitle %} Dashboard 1{% endblock subtitle %}
+
+<!-- Template Inheritance Block For Styles -->
+{% block styles %}{% endblock styles %}
+
+<!-- Template Inheritance Block For Content -->
+{% block content %}
+<h1>Dashboard Index</h1>
+
+<ul>
+  <li><a href="/dashboard/d1">Dashboard 1</a></li>
+  <li><a href="/dashboard/d2">Dashboard 2</a></li>
+  <li><a href="/dashboard/d3">Dashboard 3</a></li>
+  <li><a href="/dashboard/d4">Dashboard 4</a></li>
+</ul>
+{% endblock content %}
+
+<!-- Template Inheritance Block For Scripts -->
+{% block scripts %}{% endblock scripts %}
