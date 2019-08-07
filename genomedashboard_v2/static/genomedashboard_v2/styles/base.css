@@ -17,10 +17,14 @@ body {
 }
 
 body {
-  background-color: #111;
-  color: #fff;
+  /* background-color: #111; */
+  /* color: #fff; */
 }
 
 .navbar-brand-icon {
   margin-right: 0.5rem;
+}
+
+.content-container {
+  margin-top: 1rem;
 }
