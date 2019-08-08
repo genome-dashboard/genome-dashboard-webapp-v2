@@ -5,13 +5,15 @@
 {% block subtitle %} Dashboard 1{% endblock subtitle %}
 
 <!-- Template Inheritance Block For Styles -->
-{% block styles %}{% endblock styles %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'dashboard/styles/dashboard.css' %}">
+{% endblock styles %}
 
 <!-- Template Inheritance Block For Content -->
 {% block content %}
-<h1>Dashboard 1</h1>
+<h1>Dashboard 1: <span class="header-tail">JBrowse + JSmol</span></h1>
 
-<p><i><a href="/dashboard/">Dashboard Index</a> > Dashboard 1</i></p>
+<p></p>
 {% endblock content %}
 
 <!-- Template Inheritance Block For Scripts -->
