@@ -13,15 +13,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 # Imports and module dependencies.
 import os
 import logging
-
-
-# Secrets file.
 from genomedashboard import secrets
-
 
 # Helper methods.
 gettext = lambda s: s
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,13 +25,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bv6*hn@0g$qg-2=vjc@rfu$g7vnwz#+o&fpjevnh_ky3@bs=of'
+SECRET_KEY = secrets._SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = secrets._DEBUG
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = secrets._ALLOWED_HOSTS
 
 # Application definition
 
@@ -84,17 +78,11 @@ ROOT_URLCONF = 'genomedashboard.urls'
 WSGI_APPLICATION = 'genomedashboard.wsgi.application'
 GATEWAY_NAMESPACE = secrets._GATEWAY_NAMESPACE
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        # sqlite3
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-        # Postgres
         'ENGINE': secrets._DJANGO_DB_ENGINE,
         'NAME': secrets._DJANGO_DB_NAME,
         'USER': secrets._DJANGO_DB_USER,
@@ -103,7 +91,6 @@ DATABASES = {
         'PORT': secrets._DJANGO_DB_PORT
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -128,13 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -142,23 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# STATIC_ROOT is the location you wasnt to serve your files from AFTER you run python manage.py collectstatic.
-
-# Development paths.
-# STATIC_ROOT = os.path.join(BASE_DIR, '../static')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_srv')
-
-# Production paths.
-# STATIC_ROOT = "/var/www/example.com/static/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     # Add specific app static resources here.
     # Remember to run: python manage.py collectstatic.
-    os.path.join(BASE_DIR, 'genomedashboard/static'),
-    os.path.join(BASE_DIR, 'polls/static'),
+    os.path.join(BASE_DIR, 'genomedashboard', 'static'),
+    os.path.join(BASE_DIR, 'polls', 'static'),
+    os.path.join(BASE_DIR, 'dashboard', 'static'),
 ]
 
 STATICFILES_FINDERS = [
