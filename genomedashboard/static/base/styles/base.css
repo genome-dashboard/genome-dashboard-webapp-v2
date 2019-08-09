@@ -1,0 +1,59 @@
+body * {
+  cursor: default;
+}
+
+body {
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Merriweather Sans', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Muli', sans-serif; */
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  /* font-family: 'PT Sans', sans-serif; */
+  /* font-family: 'PT Sans Narrow', sans-serif; */
+  /* font-family: 'Titillium Web', sans-serif; */
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.navigation {
+  border-bottom: 1px solid #777;
+}
+
+.navbar-brand-icon {
+  margin-right: 0.5rem;
+}
+
+.bg-image-container {
+  z-index: -999999;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.bg-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  opacity: 0.07;
+}
+
+.content-container {
+  padding: 1rem;
+}
