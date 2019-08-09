@@ -105,10 +105,6 @@ MIDDLEWARE = [
     # 'cms.middleware.language.LanguageCookieMiddleware'
 ]
 
-<<<<<<< HEAD
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-=======
 INSTALLED_APPS = [
     # Django.
     # 'djangocms_admin_style',
@@ -160,7 +156,9 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'dashboard.apps.DashboardConfig'
 ]
->>>>>>> refactor-structure
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -173,8 +171,6 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
-=======
 MIGRATION_MODULES = {
 
 }
@@ -202,7 +198,6 @@ LANGUAGES = (
 WSGI_APPLICATION = 'genomedashboard.wsgi.application'
 GATEWAY_NAMESPACE = secrets._GATEWAY_NAMESPACE
 
->>>>>>> refactor-structure
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -224,51 +219,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Logging./
 logger = logging.getLogger(__file__)
 
-<<<<<<< HEAD
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_srv')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    # Add specific app static resources here.
-    # Remember to run: python manage.py collectstatic.
-    os.path.join(BASE_DIR, 'genomedashboard', 'static'),
-    os.path.join(BASE_DIR, 'polls', 'static'),
-    os.path.join(BASE_DIR, 'dashboard', 'static'),
-]
-
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-]
-
-
-# Media files.
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
-
-
-# Internationalization.
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
-LANGUAGE_CODE = 'en'   # 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-=======
 # DjangoCMS configuration.
 # Commented out because CMS is not installed.
 """
@@ -291,7 +241,6 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
->>>>>>> refactor-structure
 
 CMS_TEMPLATES = secrets._CMS_TEMPLATES
 CMS_PERMISSION = True
@@ -304,7 +253,6 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
-"""
 
 DJANGOCMS_PICTURE_NESTING = True
 DJANGOCMS_PICTURE_RESPONSIVE_IMAGES = True
@@ -319,6 +267,8 @@ DJANGOCMS_AUDIO_ALLOWED_EXTENSIONS = ['mp3', 'ogg', 'wav']
 # DJANGOCMS_AUDIO_TEMPLATES = [
 #     ('feature', _('Featured Version')),
 # ]
+
+"""
 
 # Google Analytics.
 GOOGLE_ANALYTICS_PROPERTY_ID = secrets._GOOGLE_ANALYTICS_PROPERTY_ID
