@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Template Inheritance Block For Title -->
+{% block subtitle %}Home{% endblock subtitle %}
+
+<!-- Template Inheritance Block For Styles -->
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'genomedashboard/styles/about.css' %}">
+{% endblock styles %}
+
+<!-- Template Inheritance Block For Navigation -->
+{% block navigation %}{% endblock navigation %}
+
+<!-- Template Inheritance Block For Content -->
+{% block content %}
+<div class="content-container">
+  <div class="row">
+    <div class="col">
+      <!--
+      <h1>Genome Dashboard</h1>
+
+      <p>Genomics is a sequence based informatics science and a structure based molecular science. Historically these two scientific approaches were distinct. There are few tools that unite them in a way that is readily accessible and yet scientifically robust. Here we introduce the concept of a genomics dashboard as a tool specifically designed to integrate informatics and physical modeling approaches for the study of chromatin.</p>
+      -->
+
+      <h2>Projects</h2>
+
+      <h5><a href="https://github.com/genome-dashboard/genome-dashboard-python" target="_blank"><b>genome-dashboard-python</b></a></h5>
+
+      <p>The Genome Dashboard python package is the logic behind a web-based prototype of a genomics dashboard, specifically designed to integrate informatics and 4D material studies of chromatin. Genome Dashboard unites our Interactive Chromatin Modeling (ICM) tools with the Biodalliance genome browser and the JSMol molecular viewer to rapidly fold any DNA sequence into atomic or coarse-grained models of DNA, nucleosomes or chromatin.<br/>
+        <div class="substatus"><i>- Status Info Pending.</i></div>
+      </p>
+
+      <h5><a href="https://github.com/genome-dashboard/genome-dashboard-javascript" target="_blank"><b>genome-dashboard-javascript</b></a></h5>
+
+      <p>Javascript module for the genome dashboard project.<br/>
+        <div class="substatus"><i>- Status Info Pending.</i></div>
+      </p>
+
+      <h5><a href="https://github.com/genome-dashboard/genome-dashboard-webapp-v2" target="_blank"><b>genome-dashboard-webapp-v2</b></a></h5>
+
+      <p>Django 2.2 and Python 3.5 version of the Genome Dashboard webapp.<br/>
+        <div class="substatus"><i>- Status Info Pending.</i></div>
+      </p>
+
+      <h5><a href="https://github.com/genome-dashboard/genome-dashboard-webapp-v1" target="_blank"><b>genome-dashboard-webapp-v1</b></a></h5>
+
+      <p>Django 1.11 and Python 2.7.9 version of the Genome Dashboard webapp.<br/>
+        <div class="substatus"><i>- Deprecated in favor of version 2.</i></div>
+      </p>
+    </div>
+
+    <div class="col">
+      <h3>Genome Dashboard Dependencies</h3>
+
+      <ul>
+        <li><a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank">VMD</a> - Visual Molecular Dynamics</li>
+        <li><a href="http://x3dna.org/" target="_blank">X3DNA</a> - Visualizing 3-Dimensional Nucleic Acid Structures</li>
+        <li><a href="http://ambermd.org/AmberTools.php" target="_blank">Amber Tools</a> - Computational Chemistry</li>
+        <li><a href="https://lammps.sandia.gov/" target=_blank">LAMMPS</a> - Large-scale Atomic/Molecular Massively Parallel Simulator</li>
+        <li><a href="http://www.libpng.org/pub/png/libpng.html" target=_blank">libpng (version 1.2)</a> - PNG Reference Library</li>
+        <li><a href="http://gcc.gnu.org/onlinedocs/gccint/Libgcc.html" target=_blank">libgcc (version s1)</a> - Low-level Runtime Library</li>
+        <li><a href="https://genome.ucsc.edu/goldenpath/help/bigWig.html" target=_blank">wigToBigWig</a> - Wiggle to BigWig Conversion Utility</li>
+        <li><a href="https://academic.oup.com/nar/article/38/suppl_2/W254/1121181" target=_blank">ICM</a> - Interactive Chromatin Modelling</li>
+        <li><a href="http://dna.engr.latech.edu/icm-du/" target=_blank">ICM Web</a> - Web-based ICM</li>
+        <li><a href="https://www.python.org/downloads/release/python-350/" target=_blank">Python 3.5</a> - Python Programming Language</li>
+        <li><a href="https://pip.pypa.io/en/stable/news/" target=_blank">Pip (version 19.2.1)</a> - Python Package Installer</li>
+        <li><a href="https://pkgs.org/download/python-devel" target=_blank">python-devel</a> - Python Extensions Header Files</li>
+        <li><a href="https://numpy.org/" target=_blank">numpy-dev</a> - Numerical Scientific Computing</li>
+        <li><a href="https://github.com/benjschiller/twobitreader" target=_blank">twobitreader</a> - File Reader (2-bit) for DNA Sequences</li>
+        <li><a href="https://github.com/deeptools/pyBigWig" target=_blank">pyBigWig</a> - Python C-extension to Support bigWig & bigBed Files</li>
+        <li><a href="https://www.djangoproject.com/" target="_blank">Django (version 2.2)</a> - Python based Web Framework</li>
+        <li><a href="https://d3js.org/" target=_blank">D3.js</a> - Data Driven Documents JavaScript Library</li>
+        <li><a href="https://jquery.com/" target=_blank">JQeury</a> - DOM Manipulation JavaScript Library</li>
+        <li><a href="https://jbrowse.org/" target="_blank">Jbrowse</a> - Embeddable HTML5 Genome Browser</li>
+        <li><a href="https://www.biodalliance.org/" target="_blank">Biodalliance</a> - Embeddable Genome Visualization Tool</li>
+        <li><a href="https://chemapps.stolaf.edu/jmol/jsmol/jsmol.htm" target="_blank">JSmol</a> - HTML5/Java-switchable Version of JSmol</li>
+        <li><a href="https://github.com/arose/ngl" target="_blank">NGL Viewer</a> - WebGL Molecular Graphics Visualization Tools</li>
+        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap (version 4.0.0)</a> - Web Component Library</li>
+      </ul>
+
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Additional Server Dependencies
+        </button>
+      </p>
+
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body card-dark">
+          <h3>Additional Server Dependencies (unvetted)</h3>
+
+          <ul>
+            <li>acme==0.30.2</li>
+            <li>alabaster==0.7.10</li>
+            <li>appdirs==1.4.3</li>
+            <li>argh==0.26.1</li>
+            <li>asn1crypto==0.24.0</li>
+            <li>astroid==1.6.1</li>
+            <li>attrs==17.4.0</li>
+            <li>Automat==0.6.0</li>
+            <li>Babel==2.5.1</li>
+            <li>backports-abc==0.5</li>
+            <li>backports.functools-lru-cache==1.2.1</li>
+            <li>backports.shutil-get-terminal-size==1.0.0</li>
+            <li>bcrypt==3.1.4</li>
+            <li>beautifulsoup4==4.6.0</li>
+            <li>biopython==1.72</li>
+            <li>bleach==2.1.3</li>
+            <li>blosc==1.5.1</li>
+            <li>boto==2.48.0</li>
+            <li>Bottleneck==1.2.1</li>
+            <li>Brownie==0.5.1</li>
+            <li>certbot==0.30.2</li>
+            <li>certbot-apache==0.30.2</li>
+            <li>certifi==2018.1.18</li>
+            <li>cffi==1.11.2</li>
+            <li>chardet==3.0.4</li>
+            <li>ConfigArgParse==0.10.0</li>
+            <li>configobj==5.0.6</li>
+            <li>configparser==3.5.0</li>
+            <li>constantly==15.1.0</li>
+            <li>cryptography==2.1.4</li>
+            <li>cssselect==1.0.3</li>
+            <li>cycler==0.10.0</li>
+            <li>dblatex==0.3.10</li>
+            <li>decorator==4.2.1</li>
+            <li>dnspython==1.15.0</li>
+            <li>docrepr==0.1.0</li>
+            <li>docutils==0.14</li>
+            <li>ecdsa==0.13</li>
+            <li>editdistance==0.3.1</li>
+            <li>entrypoints==0.2.3</li>
+            <li>enum34==1.1.6</li>
+            <li>et-xmlfile==1.0.1</li>
+            <li>fasteners==0.14.1</li>
+            <li>funcsigs==1.0.2</li>
+            <li>functools32==3.2.3.post2</li>
+            <li>future==0.16.0</li>
+            <li>futures==3.2.0</li>
+            <li>Genshi==0.7</li>
+            <li>gevent==1.2.2</li>
+            <li>gmpy==1.17</li>
+            <li>google-api-python-client==1.6.7</li>
+            <li>greenlet==0.4.13</li>
+            <li>h5py==2.7.1</li>
+            <li>html5lib==1.0.1</li>
+            <li>httplib2==0.10.3</li>
+            <li>hyperlink==17.2.1</li>
+            <li>idna==2.6</li>
+            <li>imagesize==0.7.1</li>
+            <li>incremental==17.5.0</li>
+            <li>ipaddress==1.0.18</li>
+            <li>ipykernel==4.8.2</li>
+            <li>ipyparallel==6.1.1</li>
+            <li>ipython==5.5.0</li>
+            <li>ipython-genutils==0.2.0</li>
+            <li>ipywidgets==7.2.1</li>
+            <li>isort==4.2.15</li>
+            <li>jdcal==1.3</li>
+            <li>jedi==0.11.0</li>
+            <li>Jinja2==2.10</li>
+            <li>josepy==1.1.0</li>
+            <li>jsonschema==2.6.0</li>
+            <li>jupyter-client==5.2.2</li>
+            <li>jupyter-core==4.4.0</li>
+            <li>keyring==10.5.0</li>
+            <li>lazy-object-proxy==1.2.2</li>
+            <li>lxml==4.0.0</li>
+            <li>MarkupSafe==1.0</li>
+            <li>matplotlib==2.0.2</li>
+            <li>mccabe==0.6.1</li>
+            <li>mistune==0.8.3</li>
+            <li>mock==2.0.0</li>
+            <li>monotonic==1.3</li>
+            <li>mpi4py==2.0.0</li>
+            <li>mpmath==0.19</li>
+            <li>nbconvert==5.3.1</li>
+            <li>nbformat==4.4.0</li>
+            <li>ndg-httpsclient==0.4.0</li>
+            <li>notebook==5.4.1</li>
+            <li>numexpr==2.6.4</li>
+            <li>numpy==1.14.0</li>
+            <li>numpydoc==0.7.0</li>
+            <li>oauth2client==4.1.2</li>
+            <li>olefile==0.44</li>
+            <li>openpyxl==2.4.9</li>
+            <li>packaging==16.8</li>
+            <li>pandas==0.22.0</li>
+            <li>pandocfilters==1.4.2</li>
+            <li>paramiko==2.4.2</li>
+            <li>parsedatetime==2.4</li>
+            <li>parso==0.1.1</li>
+            <li>pathlib2==2.3.0</li>
+            <li>pathtools==0.1.2</li>
+            <li>pbr==3.1.1</li>
+            <li>pexpect==4.3.1</li>
+            <li>pickleshare==0.7.4</li>
+            <li>Pillow==5.0.0</li>
+            <li>prompt-toolkit==1.0.15</li>
+            <li>psutil==5.4.3</li>
+            <li>ptyprocess==0.5.2</li>
+            <li>py==1.5.2</li>
+            <li>pyasn1==0.4.2</li>
+            <li>pyasn1-modules==0.2.1</li>
+            <li>pyBigWig==0.3.11</li>
+            <li>pycairo==1.15.1</li>
+            <li>pycodestyle==2.3.1</li>
+            <li>pycparser==2.17</li>
+            <li>pycrypto==2.6.1</li>
+            <li>pycurl==7.43.0.1</li>
+            <li>pydicom==0.9.9</li>
+            <li>pyflakes==1.6.0</li>
+            <li>Pygments==2.2.0</li>
+            <li>pygobject==3.26.1</li>
+            <li>pylint==1.8.2</li>
+            <li>pymongo==3.6.0</li>
+            <li>PyNaCl==1.2.1</li>
+            <li>pyOpenSSL==17.5.0</li>
+            <li>pyparsing==2.2.0</li>
+            <li>pyRFC3339==1.0</li>
+            <li>pyserial==3.4</li>
+            <li>PySocks==1.6.8</li>
+            <li>python-augeas==0.5.0</li>
+            <li>python-dateutil==2.6.1</li>
+            <li>python-gflags==3.1.1</li>
+            <li>python2-pythondialog==3.3.0</li>
+            <li>pytz==2017.3</li>
+            <li>pyudev==0.21.0</li>
+            <li>PyYAML==3.12</li>
+            <li>pyzmq==17.0.0</li>
+            <li>QtAwesome==0.4.4</li>
+            <li>qtconsole==4.3.1</li>
+            <li>QtPy==1.4.1</li>
+            <li>requests==2.18.4</li>
+            <li>requests-toolbelt==0.8.0</li>
+            <li>rope==0.10.7</li>
+            <li>rpm==4.14.1</li>
+            <li>rsa==3.4.2</li>
+            <li>scandir==1.7</li>
+            <li>scipy==1.0.0</li>
+            <li>SecretStorage==2.3.1</li>
+            <li>Send2Trash==1.4.1</li>
+            <li>service-identity==16.0.0</li>
+            <li>simplegeneric==0.8.1</li>
+            <li>simplejson==3.13.2</li>
+            <li>singledispatch==3.4.0.3</li>
+            <li>six==1.11.0</li>
+            <li>snowballstemmer==1.2.1</li>
+            <li>Sphinx==1.6.5</li>
+            <li>sphinx-rtd-theme==0.2.4</li>
+            <li>sphinxcontrib-websupport==1.0.1</li>
+            <li>spyder==3.2.8</li>
+            <li>SQLAlchemy==1.2.7</li>
+            <li>subprocess32==3.2.7</li>
+            <li>sympy==1.1.1</li>
+            <li>tables==3.4.3</li>
+            <li>termcolor==1.1.0</li>
+            <li>terminado==0.8.1</li>
+            <li>testpath==0.3.1</li>
+            <li>tornado==4.5.3</li>
+            <li>traitlets==4.3.2</li>
+            <li>Twisted==17.9.0</li>
+            <li>twobitreader==3.1.6</li>
+            <li>typing==3.6.2</li>
+            <li>uritemplate==3.0.0</li>
+            <li>urllib3==1.22</li>
+            <li>urlscan==0.8.6</li>
+            <li>urwid==2.0.1</li>
+            <li>watchdog==0.8.3</li>
+            <li>wcwidth==0.1.7</li>
+            <li>webencodings==0.5.1</li>
+            <li>Werkzeug==0.12.2</li>
+            <li>Whoosh==2.7.4</li>
+            <li>widgetsnbextension==3.2.1</li>
+            <li>wrapt==1.10.10</li>
+            <li>wxPython==3.0.2.0</li>
+            <li>wxPython-common==3.0.2.0</li>
+            <li>xlrd==1.0.0</li>
+            <li>XlsxWriter==0.9.6</li>
+            <li>xlwt==1.3.0</li>
+            <li>zope.component==4.3.0</li>
+            <li>zope.event==4.2.0</li>
+            <li>zope.interface==4.4.2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+<!-- Template Inheritance Block For Scripts -->
+{% block scripts %}
+<script type="text/javascript" src="{% static 'genomedashboard/scripts/about.js' %}" crossorigin="anonymous"></script>
+{% endblock scripts %}
