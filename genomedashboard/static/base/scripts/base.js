@@ -1,1 +1,1 @@
-console.log('Executing script block in genomedashboard/scripts/base.js...')
+console.log('Interpreting: genomedashboard/scripts/base.js.');
