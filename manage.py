@@ -1,1 +1,1 @@
-manage.py.v2
+manage.py.v1

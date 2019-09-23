@@ -1,0 +1,47 @@
+upstream gdash {
+    #server unix:/srv/gdash/gdash.sock;
+    #server unix:/run/gunicorn/socket;
+    server 127.0.0.1:8000;
+    #server 129.114.6.8:8000;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    
+    #server_name $VM_IP_ADDRESS; 
+    server_name 129.114.6.8;
+
+    charset utf-8;
+    keepalive_timeout 5;
+ 
+    location /favicon {
+        alias /srv/gdash/static/favicon.ico;
+    }
+ 
+    location /static {
+        root /srv/gdash;
+    }
+ 
+    location /media {
+        root /srv/gdash;
+    }
+ 
+    #location / {
+    location @proxy_to_app {
+	proxy_redirect off;
+	proxy_buffering off;
+
+        proxy_set_header Host $http_host;
+	#proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+	proxy_set_header X-Forwarded-Host $server_name;
+	
+	#proxy_pass http://unix:/srv/gdash/gdash.sock;
+	#proxy_pass http://unix:/run/gunicorn/socket;
+        proxy_pass http://gdash;
+    }
+}
+
