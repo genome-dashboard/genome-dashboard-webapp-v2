@@ -1,18 +1,13 @@
 [Unit]
 Description=GDash Gunicorn Daemon
-#Requires=gunicorn.socket
 #Requires=socket
 After=network.target
- 
+
 [Service]
-PIDfile=/run/gunicorn/pid
 User=root
 Group=nginx
-RuntimeDirectory=gunicorn
-WorkingDirectory=/srv/gdash
-#ExecStart=/srv/.gdash_env/bin/gunicorn --workers 2 --bind unix:/srv/gdash/gdash.sock genomedashboard.wsgi:application
-ExecStart=/srv/.gdash_env/bin/gunicorn --pid /run/gunicorn/pid --workers 2 --bind unix:/srv/gdash/gdash.sock genomedashboard.wsgi:application
-#ExecStart=/srv/.gdash_env/bin/gunicorn --pid /run/gunicorn/pid --workers 2 --bind unix:/run/gunicorn/socket genomedashboard.wsgi:application
+#ExecStart=/srv/.gdash_venv/bin/gunicorn --workers 5 --bind unix:/srv/gdash/gdash.sock genomedashboard.wsgi:application
+ExecStart=/srv/.gdash_venv/bin/gunicorn --pid /run/gunicorn/pid --workers 5 --bind unix:/srv/gdash/gdash.sock genomedashboard.wsgi:application
 
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
@@ -20,4 +15,3 @@ PrivateTmp=True
 
 [Install]
 WantedBy=multi-user.target
-
