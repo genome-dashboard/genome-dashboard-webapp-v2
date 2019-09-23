@@ -90,3 +90,5 @@ genomedashboard/secrets.py
 ### Dev Cruft
 db.sqlite3
 devnotes.txt
+systemd_usage.sh
+deployment_steps.sh
