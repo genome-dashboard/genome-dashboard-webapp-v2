@@ -29,6 +29,10 @@ body {
   border-bottom: 1px solid #777;
 }
 
+.nav-item {
+  margin: 0 1.5rem;
+}
+
 .fas-nav-icon {
   margin-right: 0.5rem;
 }
