@@ -1,12 +1,3 @@
-.subnav {
-  margin: 0;
-  padding: 0;
+.screenshot {
   width: 100%;
-  background-color: #555;
-  color: #ccc;
-  border-bottom: 1px solid #777;
-}
-
-.subnav a {
-  margin: 0 2rem;
 }

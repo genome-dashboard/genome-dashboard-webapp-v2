@@ -14,21 +14,18 @@
 
 <!-- Template Inheritance Block For Content -->
 {% block content %}
-<div class="row">
-  <div class="subnav">
-    <a href="http://dna.engr.latech.edu/" class="navbar-brand">TMBLAB</a>
-  </div>
-</div>
-<div class="row content-container">
-    <div class="col-xs-9">
-        <h1>Genome Dashboard</h1>
-        <p>Genomics is a sequence based informatics science and a structure based molecular science. Historically these two scientific approaches were distinct. There are few tools that unite them in a way that is readily accessible and yet scientifically robust. Here we introduce the concept of a genomics dashboard as a tool specifically designed to integrate informatics and physical modeling approaches for the study of chromatin. </p>
-        <button class="btn btn-lg btn-primary" onclick="window.location.href='http://dna.engr.latech.edu/~gdash/'">GDash</button>
-        <button class="btn btn-lg btn-primary" onclick="window.location.href='http://dna.engr.latech.edu/~zli007/ICM-DGB/'">GDash-dev</button>
-        <button class="btn btn-lg btn-success" onclick="window.location.href='http://dna.engr.latech.edu/~gdash/GDash-landing-page/GDash-video.html'">Video Demo</button>
+<div class="content-container">
+  <div class="row">
+    <div class="col-5">
+      <h1>Genome Dashboard</h1>
+      <p>Genomics is a sequence based informatics science and a structure based molecular science. Historically these two scientific approaches were distinct. There are few tools that unite them in a way that is readily accessible and yet
+        scientifically robust. Here we introduce the concept of a genomics dashboard as a tool specifically designed to integrate informatics and physical modeling approaches for the study of chromatin.</p>
+      <a role="button" class="btn btn-block btn-lg btn-secondary" href="http://dna.engr.latech.edu/~gdash/GDash-landing-page/GDash-video.html" target="_blank">Video Demo</a>
+      <a role="button" class="btn btn-block btn-lg btn-success" href="http://dna.engr.latech.edu/~gdash/" target="_blank">GDash</a>
+      <a role="button" class="btn btn-block btn-lg btn-primary" href="http://dna.engr.latech.edu/~zli007/ICM-DGB/" target="_blank">GDash-dev</a>
     </div>
-    <div class="col-xs-3">
-        <img src="{% static 'genomedashboard/images/Responsive-Web-Design.png' %}" alt="" style="margin-top:1rem; width:20rem;">
+    <div class="col-7">
+      <img class="screenshot" src="{% static 'genomedashboard/images/Responsive-Web-Design.png' %}" alt="gdash image"><!-- style="margin-top:1rem; width:20rem;" -->
     </div>
   </div>
 </div>
