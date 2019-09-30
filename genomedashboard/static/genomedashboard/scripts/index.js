@@ -1,1 +1,1 @@
-console.log('Executing script block in genomedashboard/scripts/index.js...')
+// console.log('Executing script block in genomedashboard/scripts/index.js...')

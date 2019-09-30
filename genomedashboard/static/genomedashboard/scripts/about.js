@@ -1,1 +1,1 @@
-console.log('Interpreting: genomedashboard/scripts/about.js.');
+// console.log('Interpreting: genomedashboard/scripts/about.js.');
