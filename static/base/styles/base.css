@@ -21,12 +21,16 @@ body {
 }
 
 body {
-  background-color: #111;
+  background-color: rgba(15, 15, 15, 0.9);
   color: #fff;
 }
 
 .navigation {
   border-bottom: 1px solid #777;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
 }
 
 .fas-nav-icon {
@@ -51,9 +55,13 @@ body {
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-  opacity: 0.07;
+  opacity: 0.08;
 }
 
-.screenshot {
-  width: 100%;
+.content-container {
+  margin: 1rem 1rem 0;
+}
+
+.nested-content {
+  margin: 1rem 2rem;
 }
