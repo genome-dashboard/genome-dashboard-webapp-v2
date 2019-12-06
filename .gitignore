@@ -86,7 +86,6 @@ local_settings.py
 /static/
 /media/
 
-
 genomedashboard/secrets.py
 
 ### Dev Cruft
