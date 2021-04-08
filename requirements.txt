@@ -1,5 +1,5 @@
 certifi==2018.8.24
-Django==2.2.7
+Django==2.2.20
 genomedashboard==0.0.54
 psycopg2==2.8.4
 pytz==2019.3
